@@ -1,0 +1,50 @@
+/*
+    @package purnatur
+    
+    MIXINS
+  ---------------------------------
+*/
+
+@mixin animate ( $attr, $time){
+    /* -webkit-transition: $attr $time ease;
+    -moz-transition: $attr $time ease;
+    -ms-transition: $attr $time ease;
+    -o-transition: $attr $time ease; */
+    transition: $attr $time;
+}
+
+@mixin transform( $val ) {
+    -webkit-transform: $val;
+    -moz-transform: $val;
+    -ms-transform: $val;
+    -o-transform: $val;
+    transform: $val;
+}
+
+@mixin boxshadow {
+    -webkit-box-shadow: 5px 5px 15px 0px #999999; 
+    box-shadow: 5px 5px 15px 0px #999999;
+}
+
+@mixin arrow {
+    content: '\f0a9';
+    font-family: 'Font Awesome 5 Free';
+    font-size: 32px;
+    color: $color__accent;
+    margin-right: 1rem;
+    vertical-align: middle;
+   display: inline-block;
+   line-height: 1.4;
+}
+
+@mixin titleaccent {
+    color: $color__accent;
+    font-size: 1em;
+    font-weight: $bold;
+    line-height: 1.5;
+}
+
+@keyframe spin {
+    from { transform: rotate(0)}
+    to { transform: rotate(360)}
+}
