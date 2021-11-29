@@ -2,7 +2,7 @@
 
 /*
 	
-@package gsc
+@package fraaiberlin
 	
 	========================
 		THEME SUPPORT
@@ -11,15 +11,13 @@
 
 
 
-add_theme_support('post-thumbnails');
-add_image_size( 'thumb-archive', 278, 156, true );
+
 
 
 //menu options
 function quanta_register_nav_menu() {
-	register_nav_menu( 'top-bar' , 'This is the Top Bar menu' );
-	register_nav_menu( 'primary-left' , 'This is the Main Top Menu Left Side' );
-	register_nav_menu( 'primary-right' , 'This is the Main Top Menu Right Side' );
+	
+	register_nav_menu( 'primary' , 'This is the Main Nav ' );
 	register_nav_menu( 'footer' , 'This is the Footer Menu' );
 }
 
@@ -129,9 +127,8 @@ function widget_registration($name, $id, $description,$beforeWidget, $afterWidge
 }
 
 function multiple_widget_init(){
-	widget_registration('Footer Col 2', 'footer-sidebar-1', 'Address column', '', '', '', '');
-	widget_registration('Footer Col 3', 'footer-sidebar-2', 'Menu Footer', '', '', '', '');
-	widget_registration('Footer Col 4', 'footer-sidebar-3', 'Social Icons', '', '', '', '');
+	widget_registration('Footer Left', 'footer-1', 'Menu', '', '', '', '');
+	widget_registration('Footer Right', 'footer-2', 'Menu', '', '', '', '');
 }
 
 add_action('widgets_init', 'multiple_widget_init');

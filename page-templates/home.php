@@ -5,7 +5,7 @@
 * @package fraaiberlin
 */
 
-get_header();
+get_header('home');
 
 
 ?>

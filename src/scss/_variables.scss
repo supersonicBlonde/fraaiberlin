@@ -1,10 +1,12 @@
 /**********************************
 	COLORS
 	***********************************/
-$color__primary: #343434;
-$color__accent: #FF1938;
-$color__body: #343434;
-$color__h1: #2ECDFF;
+$color__body: #4E4E4E;
+$body__background: #FFF;
+$color__primary: #4E4E4E;
+$color__accent: #FFFFFF;
+$color__links: #4E4E4E!important;
+
 
 $background-light: #F8F8F8;
 $background-dark: #304D60; 
@@ -15,9 +17,27 @@ $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 
 
-$font__primary: 'Poppins', sans-serif;
-$font__secondary:'Work Sans', sans-serif;
+$font__primary: 'Josefin Sans', sans-serif;
+
 $light: 300;
+$regular: 400;
 $medium: 500;
 $semi: 600;
-$bold: 700;
+$bold: 700; 
+
+
+
+/* MAIN NAVIGATION  
+		DARK 
+*/
+
+$nav__color_links: #C4C4C4;
+$nav__color_links_hover: white;
+$nav__fontsize_links: 1.2em;
+$nav__spacing_items: 1.2em; 
+
+/* FOOTER NAVIGATION  */
+$footer__color_links: #4E4E4E;
+$footer__fontsize_links: 1.2em;
+$footer__spacing_items: 1.2em; 
+

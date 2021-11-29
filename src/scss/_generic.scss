@@ -11,12 +11,15 @@ body {
 	color: $color__body;
 	font-weight: 400;
 	font-family: $font__primary;
-	font-size: 10px;
-	font-weight: $medium;
+	font-size: 1.25em;
 
 	@media(min-width:992px) {
 		font-size: 16px;
 	}
+}
+
+a {
+	color: $color__links;
 }
 
 a.regular {
@@ -32,7 +35,7 @@ a.regular {
 
 
 
-p,  .content-area ul li, .content-area ol li {
+p {
 	font-family: $font__primary;
 	font-size: 0.87em;
 	font-weight: 300;
@@ -62,39 +65,6 @@ ul {
 	color: white; 
 }
 
-.content-area ul:not(.slick-dots):not(#kb-list):not(.arrow-bullets):not(.nav-pills) {
-	margin: 1em 0;
-
-	 li::before {
-		content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-		color: $color__accent; /* Change the color */
-		font-weight: bold; /* If you want it to be bold */
-		display: inline-block; /* Needed to add space between the bullet and the text */
-		width: 1em; /* Also needed for space (tweak if needed) */
-		margin-left: 1em; /* Also needed for space (tweak if needed) */
-	}
-}
-
-.content-area ol {
-	margin: 1em 0;
- 	counter-reset: li;
-	list-style: none;
-
-	li {
-		counter-increment: li;
-
-		&::before {
-			content: counter(li); 
-			color: $color__accent;
-			display: inline-block; 
-			width: 1em; 
-			margin-left: -1.5em;
-			margin-right: 0.5em; 
-			text-align: right; 
-			direction: rtl;
-		} 
-	}
-}
 
 .bold {
 	font-weight: 700;
@@ -300,16 +270,7 @@ img.circle {
 	}
 }
 
-.link-list {
-	li {
-		a, a:visited { 
-			font-size: 0.87em;
-			font-weight: $semi;
-			text-decoration: underline;
-			color: $color__body;
-		}
-	}
-}
+
 
 // SLICK SLIDER
 .slick-slide {
