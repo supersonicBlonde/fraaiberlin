@@ -16,8 +16,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-	<header class="master-header" id="master-header">
+  <?php $header_bg = get_field('header_background'); ?>
+	<header class="master-header" id="master-header" style="background-image:url(<?php echo $header_bg; ?>)">
 			<div class="main-navigation">	
 				<?php get_template_part('template-parts/nav' , 'main'); ?>
 		</div>
+  </header>

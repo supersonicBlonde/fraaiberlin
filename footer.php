@@ -18,7 +18,7 @@
 		<?php endif; ?>
 	</div>
 	<div>
-		<div class="logo-footer d-flex justify-content-center">
+		<div class="logo-footer d-flex justify-content-center mt-3 mt-md-0">
 			<img class="non-resp" src="<?php echo get_template_directory_uri() ?>/img/logo_fraai_berlin_footer.png" alt="Logo FraaiBerlin">	
 		</div>
 		<div class="mt-3 d-flex justify-content-center">© Fraai Berlin 2021</div>

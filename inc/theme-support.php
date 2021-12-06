@@ -9,8 +9,16 @@
 	========================
 */
 
+/*
+========================
+ENABLE WOOCOMMERCE SUPPORT
+	========================
+*/
+add_action( 'after_setup_theme', 'enable_woocommerce_support' );
 
-
+function enable_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
 
 
 

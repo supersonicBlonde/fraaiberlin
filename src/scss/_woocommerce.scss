@@ -1,0 +1,11 @@
+/**********************************************
+		WOOCOMMERCE STYLES
+
+		**************************************/
+
+
+/* Single page Product Gallery */
+.woocommerce div.product div.images .woocommerce-product-gallery__image:nth-child(n+2) {
+  width: 100%;
+  display: block;
+}

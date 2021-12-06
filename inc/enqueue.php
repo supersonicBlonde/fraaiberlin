@@ -20,7 +20,7 @@ function quanta_load_scripts() {
 		wp_register_script( 'jquery', get_template_directory_uri().'/dist/js/jquery-3.5.1.min.js', array(), '3.5.1', true );
 		wp_enqueue_script( 'jquery' );
 
-		wp_enqueue_style('josefin' , 'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+		wp_enqueue_style('josefin' , 'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
 		
 		wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css', array(), '5.1.3', 'all' );
 		wp_enqueue_style( 'slick', get_template_directory_uri().'/dist/css/slick.css', array() );
