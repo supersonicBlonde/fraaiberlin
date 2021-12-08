@@ -30,7 +30,6 @@ function quanta_load_scripts() {
 
 		wp_enqueue_style( 'font-awesome',get_template_directory_uri().'/dist/css/all.css');
 		wp_enqueue_style( 'fraaiberlin', get_template_directory_uri().'/dist/css/styles.min.css', array(), '1.0.0', 'all' );
-
 		wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', array('jquery'), '', true );	
 		wp_enqueue_script( 'slick', get_template_directory_uri().'/dist/js/slick.min.js', array('jquery'), '', true );	
 	
@@ -52,3 +51,4 @@ function quanta_load_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'quanta_load_scripts');
+

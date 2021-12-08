@@ -3,6 +3,10 @@
 
 		**************************************/
 
+h1 {
+  font-size: 3em;
+}
+
 h2 {
   &:not(.white) {
     font-weight:300;
@@ -51,5 +55,9 @@ h2.title-lines {
       margin: 0 0 0 90px;
     }
   }
+}
+
+h3 {
+  font-size: 3em;
 }
 

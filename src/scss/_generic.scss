@@ -9,7 +9,7 @@ html {
 
 body {
 	color: $color__body;
-	font-weight: 400;
+	font-weight: $light;
 	font-family: $font__primary;
 	font-size: 14px;
 
@@ -38,12 +38,8 @@ a.regular {
 
 p {
 	font-family: $font__primary;
-	font-size: 0.87em;
+	font-size: 1.2em;
 	font-weight: 300;
-
-	&:not(.archive-ex excerpt) {
-		line-height: 1.8;
-	}
 }
 
 .p.archive-excerpt {
@@ -182,7 +178,7 @@ img.circle {
 }
 
 /* BUTTONS */
-a.button {
+a.button, .woocommerce a.button.default {
   border: 1px solid $color__body;
   font-size: 1.25em;
 	padding: 5px 15px;
@@ -190,6 +186,7 @@ a.button {
   color: $color__body; 
 	text-decoration: none;
 	transition: all .3s;
+	font-weight: $regular;
 
 	@media(min-width:992px) {
 		padding: .5em 5em;
@@ -216,9 +213,9 @@ a.button {
 		color: white;
 
 		&:hover {
-			background: rgba(255, 255, 255, 0.8);
+/* 			background: rgba(255, 255, 255, 0.8);
 			color: $color__accent;
-			border-color: $color__accent;
+			border-color: $color__accent; */
 		}
 	}
 

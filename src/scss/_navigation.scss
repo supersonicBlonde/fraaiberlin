@@ -13,11 +13,25 @@
 }
 
 .navbar-dark .navbar-nav .nav-link {
-	color: $nav__color_links!important;
 	font-size: $nav__fontsize_links;
+	font-weight: $regular;
+}
+
+.home {
+		.navbar-dark .navbar-nav .nav-link {
+			color: $nav__color_links!important;
+
+			&:hover {
+				color: $nav__color_links_hover!important;
+			}
+	}
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: $color__body!important;
 
 	&:hover {
-		color: $nav__color_links_hover!important;
+		color: $color__body!important;
 	}
 }
 
