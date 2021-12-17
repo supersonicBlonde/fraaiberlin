@@ -121,6 +121,10 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_r
 add_action( 'woocommerce_after_single_product', 'woocommerce_upsell_display', 10 );
 //add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products', 15 );
 
+// change position of variation add to cart
+remove_action( 'woocommerce_variable_add_to_cart', 'woocommerce_variable_add_to_cart', 30 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_variable_add_to_cart', 25 );
+
 /**
  * Change number of upsells output
  */
@@ -141,4 +145,29 @@ function wcc_change_breadcrumb_delimiter( $defaults ) {
 	// Change the breadcrumb delimeter from '/' to '>'
 	$defaults['delimiter'] = ' &gt; ';
 	return $defaults;
+}
+
+// hide sortering select on shop page
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+// hide button in loop archive-product
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+
+// add short description in archive-product
+add_action( 'woocommerce_after_shop_loop_item', 'valtesse_template_loop_short_description', 10 );
+
+if ( ! function_exists( 'valtesse_template_loop_short_description' ) ) {
+	function valtesse_template_loop_short_description() {
+		wc_get_template( 'loop/short_desc.php');
+	}
+}
+
+// change position of price in archive-product
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_price', 15 );
+
+// formatting price
+add_filter( 'formatted_woocommerce_price', 'fraai_custom_price_formatting', 10, 5 );
+function fraai_custom_price_formatting( $number_format, $price, $decimals, $decimal_separator, $thousand_separator){
+    return '<span class="custom-prc">'.$price.'</span>';
 }

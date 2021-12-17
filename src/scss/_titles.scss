@@ -8,7 +8,7 @@ h1 {
 }
 
 h2 {
-  &:not(.white) {
+  &:not(.white):not(.woocommerce-loop-product__title) {
     font-weight:300;
   }
 

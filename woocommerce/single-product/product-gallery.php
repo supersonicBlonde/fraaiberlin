@@ -26,13 +26,15 @@ global $product;
 
 $attachment_ids = $product->get_gallery_image_ids();
 
-if ( $attachment_ids && $product->get_image_id() ) {
-	foreach ( $attachment_ids as $attachment_id ) {
-		$image = wp_get_attachment_image( $attachment_id, 'full');
-		echo '<div class="woocommerce-product-gallery__image">' . $image . '</div>';
+if ( $attachment_ids && $product->get_image_id() ) { ?>
+	<div class="woocommerce-product-gallery__container">
+		<?php	foreach ( $attachment_ids as $attachment_id ) {
+		$image = wp_get_attachment_image_url( $attachment_id, 'full');
+		echo '<img src="' . $image . '">';
 	}
-}
-
+	?>
+	</div>
+<?php } ?>
 
 
 

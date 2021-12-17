@@ -137,6 +137,7 @@ function widget_registration($name, $id, $description,$beforeWidget, $afterWidge
 function multiple_widget_init(){
 	widget_registration('Footer Left', 'footer-1', 'Menu', '', '', '', '');
 	widget_registration('Footer Right', 'footer-2', 'Menu', '', '', '', '');
+	widget_registration('Shop Sidebar', 'sidebar-shop', 'SideBar for Shop Page', '', '', '', '');
 }
 
 add_action('widgets_init', 'multiple_widget_init');

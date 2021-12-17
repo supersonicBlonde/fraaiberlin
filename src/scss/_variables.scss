@@ -5,7 +5,11 @@ $color__body: #4E4E4E;
 $body__background: #FFF;
 $color__primary: #4E4E4E;
 $color__accent: #FFFFFF;
-$color__links: #4E4E4E!important;
+$color__links: #4E4E4E;
+$color__alt: #787676;
+
+$color__hover: #9ABACF;
+
 
 
 $background-light: #F8F8F8;
@@ -32,7 +36,7 @@ $bold: 700;
 */
 
 $nav__color_links: #C4C4C4;
-$nav__color_links_hover: white;
+$nav__color_links_hover: $color__hover;
 $nav__fontsize_links: 1.2em;
 $nav__spacing_items: 1.2em; 
 

@@ -137,7 +137,32 @@ get_header('home');
                     <div class="embed-container">
                       <?php echo $iframe; ?>
                     </div>
-                <?php endif; ?>
+                <?php elseif(get_row_layout() == 'grid_products' ): 
+                        if(have_rows('products_selection')):    ?>
+                           <div class="section module-image-text">
+                              <div class="container-fluid">
+                                <div class="row">
+                                  <?php while(have_rows('products_selection')): the_row(); ?>
+                                  <div class="col-12 col-md-4">
+                                    <div class="prod-grid-item-container">
+                                      <?php
+                                      $product = get_sub_field('product');
+                                      $permalink = get_permalink( $product->ID );
+                                      $title = get_the_title( $product->ID );
+                                      $image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->ID ), 'medium' );
+                                      
+                                      ?>
+                                      <img src="<?php  echo $image[0]; ?>">
+                                    </div>
+                                  </div>
+                                    <?php endwhile; ?>
+                                  </div>
+                                </div>
+                              </div>
+                           </div>
+                           <?php else: echo "pas ok"; ?>
+                      <?php endif;
+                     endif; ?>
                   
           <?php endwhile;
           

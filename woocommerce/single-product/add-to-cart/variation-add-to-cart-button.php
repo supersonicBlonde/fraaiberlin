@@ -27,8 +27,10 @@ global $product;
 
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
-
-	<button type="submit" id="add_to_cart_button" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+	<div class="d-flex">
+		<button type="submit" id="add_to_cart_button" class="single_add_to_cart_button button alt"><?php 	echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+		<div class="wish-button-container"><?php echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?></div>
+	</div>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 

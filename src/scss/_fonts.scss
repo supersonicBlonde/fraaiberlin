@@ -37,6 +37,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-chevron-bottom:before {
+  content: "\e901";
+  color: #c4c4c4;
+}
 .icon-chevron-top:before {
   content: "\e900";
   color: #c4c4c4;

@@ -1,6 +1,6 @@
 
 <div class="global-container">
-	<nav class="navbar navbar-expand-lg navbar-dark">
+	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="/">
 				<img class="non-resp" src="<?php echo get_template_directory_uri() ?>/img/logo_fraai_berlin.png" alt="Logo FraaiBerlin">
@@ -14,7 +14,7 @@
 				'theme_location'	=> 'primary',
 				'container' 		=> false,
 				'menu_class' 		=> 'navbar-nav mx-auto',
-				'walker'     		=> new wp_bootstrap_navwalker()
+				'walker'     		=> new bootstrap_5_wp_nav_menu_walker()
 			)) 
 			?>
 			</div>

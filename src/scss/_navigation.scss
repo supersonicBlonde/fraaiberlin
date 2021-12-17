@@ -10,69 +10,91 @@
 }
 .nav-link {
 	transition: color 0.5s;
+	color: $color__body;
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar-nav .nav-link {
 	font-size: $nav__fontsize_links;
 	font-weight: $regular;
 }
 
-.home {
-		.navbar-dark .navbar-nav .nav-link {
-			color: $nav__color_links!important;
 
-			&:hover {
-				color: $nav__color_links_hover!important;
-			}
-	}
-}
 
-.navbar-dark .navbar-nav .nav-link {
-	color: $color__body!important;
-
-	&:hover {
-		color: $color__body!important;
-	}
-}
-
-.navbar-dark .navbar-nav .menu-item {
+.navbar-nav .menu-item {
 	margin-right: $nav__spacing_items;
 	margin-left: $nav__spacing_items;
 }
 
+.home .navbar-nav .menu-item {
+		&:hover > a {
+		color: $color__hover;
+	}
+}
 
+
+//COLORS 
+
+.home .nav-link {
+	color: $nav__color_links;
+}
+
+
+.current-menu-item a.nav-link {
+	color: $color__hover;
+}
 //****************************
 //DROPDOWNS
 //****************************
 
+.dropdown-item.active, .dropdown-item:active {
+	color: $color__hover;
+	text-decoration: none;
+	background-color: transparent;
+}
 
 .navbar {
-	
-	#menu-menu-buttons {
-		display: inline-block;
+	.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+		font-family: 'icomoon';
+    content: "\e901";
+		font-size: 8px;
+		border:none;
+		color: $nav__color_links;
+}
 
-		.menu-item {
-			margin-bottom:1em;
-		}
-
-		.signup-btn {
-			text-align: center;
-		}
-		
-
-		@media(min-width: 992px) {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-		}
+	.dropdown-toggle:hover:after {
+		content: "\e900";
 	}
 
+	.menu-item-has-children:hover {
+
+		.dropdown-menu {
+			display: block;
+		}
+	}
 	.dropdown-menu {
 		border:none!important;
-		margin-top: -16px;
+	/* 	margin-top: -16px; */
+		background: rgba(255,255,255,0.8);
+		border-radius: 0;
+
+		li {
+			margin-left: 0;
+
+			a {
+				padding-left:0.5rem;
+
+				&:hover {
+					background: transparent;
+					color: $color__hover;
+				}
+			}
+		}
 
 		@media(min-width: 992px) {
-			margin-top: -16px;
+		/* 	margin-top: -16px; */
 		}
 	}
 
