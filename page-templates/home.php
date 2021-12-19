@@ -137,37 +137,55 @@ get_header('home');
                     <div class="embed-container">
                       <?php echo $iframe; ?>
                     </div>
-                <?php elseif(get_row_layout() == 'grid_products' ): 
-                        if(have_rows('products_selection')):    ?>
-                           <div class="section module-image-text">
-                              <div class="container-fluid">
-                                <div class="row">
-                                  <?php while(have_rows('products_selection')): the_row(); ?>
-                                  <div class="col-12 col-md-4">
-                                    <div class="prod-grid-item-container">
-                                      <?php
-                                      $product = get_sub_field('product');
-                                      $permalink = get_permalink( $product->ID );
-                                      $title = get_the_title( $product->ID );
-                                      $image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->ID ), 'medium' );
-                                      
-                                      ?>
-                                      <img src="<?php  echo $image[0]; ?>">
-                                    </div>
-                                  </div>
-                                    <?php endwhile; ?>
-                                  </div>
+                <?php elseif(get_row_layout() == 'module_faqs' ):
+                      if(have_rows('faq_selection')): $count = 0;
+                      $terms_ar = $questions_ar = [];
+                        while(have_rows('faq_selection')): the_row(); 
+                          $question_obj = get_sub_field('question');
+                          $id =  $question_obj->ID;
+                          $questions_ar[] = $id;
+                          $cat = get_the_terms($id , 'faq_cat');
+                          $terms_ar[] = $cat[0]->name; 
+                          $count++; 
+                        endwhile; 
+                          $terms_ar = array_unique($terms_ar); ?>
+                        <div id="home-faq" class="accordion section">
+                        <?php $count = 0; foreach($terms_ar as $term): ?>
+                        <div class="card">
+                            <div class="card-header" id="heading<?php echo $count; ?>">
+                              <div class="mb-0" >
+                                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapse<?php echo $count; ?>" aria-expanded="true" aria-controls="collapse<?php echo $count; ?>">
+                                    <?php echo $term; ?>
+                                  </button>
                                 </div>
                               </div>
-                           </div>
-                           <?php else: echo "pas ok"; ?>
-                      <?php endif;
+                              <?php
+                              foreach($questions_ar as $question):
+                            
+                                $cat = get_the_terms($question , 'faq_cat');
+                                $cat_name = $cat[0]->name; 
+                                if($cat_name == $term): ?>
+                            
+                               <div id="collapse<?php echo $count; ?>" class="collapse hide" aria-labelledby="heading<?php echo $count; ?>" data-parent="#home-faq">
+                                  <div class="card-body">
+                                    <div class="question-container">                                  <div class="question"><?php echo  get_field('question' , $question); ?></div>
+                                    <div class="answer-container">
+                                    <div class="answer"><?php echo  get_field('answer' , $question); ?></div>
+                                  </div>
+                                  </div>
+                                  </div>
+                              </div><!-- collapse -->
+                              <?php endif; ?>
+                              <?php endforeach; ?>
+                        </div>
+                        <?php $count++; endforeach; ?>
+                                </div>
+                       <?php endif;
                      endif; ?>
-                  
-          <?php endwhile;
-          
-        endif;
-      ?>
+          <?php endwhile; ?>
+
+       <?php endif; ?>
+    
     </main>
   </div>
 

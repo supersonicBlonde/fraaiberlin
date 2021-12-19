@@ -171,3 +171,30 @@ add_filter( 'formatted_woocommerce_price', 'fraai_custom_price_formatting', 10, 
 function fraai_custom_price_formatting( $number_format, $price, $decimals, $decimal_separator, $thousand_separator){
     return '<span class="custom-prc">'.$price.'</span>';
 }
+
+
+if( ! function_exists( 'yith_wcan_filter_reset_button_class' ) ){
+	function yith_wcan_filter_reset_button_class( $class ){
+	$class .= ' your_new_class';
+	return $class;
+		}
+	add_filter( 'yith_wcan_filter_reset_button_class', 'yith_wcan_filter_reset_button_class' );
+ }
+
+/*  add_filter('woocommerce_variable_sale_price_html', 'shop_variable_product_price', 10, 2);
+add_filter('woocommerce_variable_price_html','shop_variable_product_price', 10, 2 );
+function shop_variable_product_price( $price, $product ){
+    $variation_min_reg_price = $product->get_variation_regular_price('min', true);
+    $variation_min_sale_price = $product->get_variation_sale_price('min', true);
+    if ( $product->is_on_sale() && !empty($variation_min_sale_price)){
+        if ( !empty($variation_min_sale_price) )
+            $price = '<del class="strike">' .  wc_price($variation_min_reg_price) . '</del>
+        <ins class="highlight">' .  wc_price($variation_min_sale_price) . '</ins>';
+    } else {
+        if(!empty($variation_min_reg_price))
+            $price = '<ins class="highlight">'.wc_price( $variation_min_reg_price ).'</ins>';
+        else
+            $price = '<ins class="highlight">'.wc_price( $product->regular_price ).'</ins>';
+    }
+    return $price;
+} */

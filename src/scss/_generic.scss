@@ -10,7 +10,7 @@ html {
 body {
 	color: $color__body;
 	font-weight: $light;
-	font-family: $font__primary;
+	font-family: $font__primary!important;
 	font-size: 14px;
 
 	@media(min-width:992px) {
@@ -245,17 +245,6 @@ a.button, .woocommerce a.button.default {
 
 	}
 
-	&.default {
-		background: $color__accent;
-		color: white;
-
-		&:hover {
-/* 			background: rgba(255, 255, 255, 0.8);
-			color: $color__accent;
-			border-color: $color__accent; */
-		}
-	}
-
 	&.invert {
 		border-color: $color__accent;  
 		background: white;
@@ -268,22 +257,6 @@ a.button, .woocommerce a.button.default {
 		}
 	}
 
-	&.loadmore {
-		color: $color__accent;
-		background: white;
-		border: 1px solid $color__accent;
-
-		&:hover:not(.disabled) {
-			background: $color__accent;
-			color: white;
-		}
-
-		&.disabled {
-			opacity: 0.2;
-			background: #CCC;
-			cursor: default!important;
-		}
-	}
 
 	&:focus, &:active {
 		outline: 0;

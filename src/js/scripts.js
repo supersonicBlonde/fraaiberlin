@@ -9,10 +9,10 @@ console.log('loaded-slick');
 
 
 jQuery(function($){ 
-
-     /* var element = $('.clear-selection').detach();
-    $( ".filter-title" ).wrap( "<div class='filter-title-container d-flex align-items-center justify-content-between'></div>" );
-    element.insertAfter($('.filter-title')).show();  */
+    $(".card-header button").click(function(e) {
+        let button = e.target;
+        button.classList.toggle("open");
+    });
    
 });
 

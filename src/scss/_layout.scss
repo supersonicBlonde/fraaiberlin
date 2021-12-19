@@ -108,7 +108,32 @@ footer .global-container {
 	}
 }
 
+.master-header.home {
+	position: relative;
+}
 
+.hero-text {
+  position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	color: white;
+	font-size: 2em;
+	font-family: 'Abril Fatface', cursive;
+}
+
+
+#home-faq {
+
+
+
+	.card-header, .question, .answer {
+		@media(min-width: 992px) {
+			width: 45%;
+			margin: 0 auto;
+		}
+	}
+}
 
 @media (min-width: 1200px) {
 	.container {

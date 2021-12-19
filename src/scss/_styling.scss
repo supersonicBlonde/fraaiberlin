@@ -55,3 +55,97 @@ footer .menu {
   } 
 }
 
+.accordion {
+
+  .card {
+    border: none;
+
+    .card-header {
+      background: transparent;
+      border-bottom-color:  #787676;
+      padding: 0;
+    } 
+
+    .btn {
+      font-size: 1.5em;
+      color: $color__body;
+      text-decoration: none;
+      font-weight: $light;
+      padding-left: 0;
+      display:flex;
+      align-items: center;
+
+      &:after {
+          font-family: 'icomoon';
+          content: "\e901";
+          font-size: 8px;
+          border:none;
+          color: $nav__color_links;
+          margin-left: 15px;
+
+      }
+
+      &.closed:after {
+        content: "\e901";
+      }
+
+      &.open:after {
+        content: "\e902";
+      }
+    } 
+    
+    .card-body {
+      font-size: 1.5em;
+      p {
+        font-size: 1em;
+      }
+
+      .answer-container {
+        padding: 1em 0;
+        background: #CBDFE6;
+      }
+    }
+  }
+}
+
+
+//    BODY
+/*******************************/
+.scale {
+	transition: all 0.5s;
+
+	&.scaleOut {
+		transform: scale(0.99);
+	}
+
+	&.scaleIn {
+		transform: scale(1);
+	}
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  display: none;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  transition: opacity 2s;
+
+  &.show {
+  	opacity: 1;
+  	display: block;
+  }
+
+   &.hide {
+  	opacity: 0;
+  	display: none;
+  }
+
+}

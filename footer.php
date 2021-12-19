@@ -25,7 +25,8 @@
 	</div>
 </footer>
 </div><!-- #global-container -->
-
+<div id="overlay"></div>
+</div><!-- .scale -->
 <?php wp_footer(); ?>
 </body>
 </html>

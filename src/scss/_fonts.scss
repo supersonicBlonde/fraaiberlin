@@ -37,6 +37,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+// ICONS NAV
+.icon-cart-icon:before {
+  content: "\e902";
+}
+.icon-my-account:before {
+  content: "\e903";
+}
+.icon-search-icon:before {
+  content: "\e904";
+}
 .icon-chevron-bottom:before {
   content: "\e901";
   color: #c4c4c4;
@@ -44,4 +55,16 @@
 .icon-chevron-top:before {
   content: "\e900";
   color: #c4c4c4;
+}
+
+// LANGUAGE SWITCHER
+.wpml-ls-legacy-list-horizontal a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size:18px!important;
+  font-weight: 400!important;
+}
+
+.wpml-ls-item:first-child a:after {
+  content: "/";
 }

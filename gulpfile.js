@@ -39,13 +39,13 @@ var mapURL       = './';
 
 var jsSRC        = './src/js/';
 var jsBase		   = 'scripts.js';
-var jsFilter		   = 'filter.js';
-/* var jsLoadMore	   = 'loadmore.js'; */
+/* var jsFilter		   = 'filter.js'; */
+var jsLoadMore	   = 'loadmore.js'; 
 //var jsTimeline   = 'timeline.js';
 /*var jsSlider     = 'slider.js';
 var jsAuth       = 'auth.js';*/
 //var jsFiles      = [  jsAdmin, jsConnect];
-var jsFiles      = [  jsBase , jsFilter  ];
+var jsFiles      = [  jsBase , jsLoadMore  ];
 var jsURL        = './dist/js/';
 
 

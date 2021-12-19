@@ -58,16 +58,20 @@ else {
 				<div class="col-md-9 col-12">
 					<div class="catalogue-container">
 				<?php
+				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+		
 				$args = array(
 					'post_type' => 'product',
 					'posts_per_page' => 12,
-					'tax_query' => $tax
+					'tax_query' => $tax,
+					'paged' => $paged
         );
-        
+       
         $the_query = new WP_Query( $args );
+		 		$max_pages = $the_query->max_num_pages;
         if ( $the_query->have_posts() ): ?>
           <div class="container-fluid">
-            <div class="row product-catalogue-item__container">
+            <div class="row product-catalogue-item__container test">
           <?php 
           while ( $the_query->have_posts() ):
               $the_query->the_post();
@@ -84,6 +88,14 @@ else {
               </div>
           <?php endwhile; ?>
             </div>
+						<div class="row">
+							<div class="col-12 text-center">
+							<?php global $the_query;?>
+								<?php if($max_pages > 1):  ?>
+									<a href="" data-current="1" data-max='<?php echo $max_pages ?>'  class="loadmore button default"><?php echo __('Show more' , 'gsc'); ?></a>
+								<?php endif; ?>
+							</div>
+						</div>
           </div>
           <?php else: 
           echo "no products found";

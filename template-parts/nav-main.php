@@ -14,9 +14,10 @@
 				'theme_location'	=> 'primary',
 				'container' 		=> false,
 				'menu_class' 		=> 'navbar-nav mx-auto',
-				'walker'     		=> new bootstrap_5_wp_nav_menu_walker()
+				'walker'     		=> new wp_bootstrap_navwalker()
 			)) 
 			?>
+			<?php do_action('wpml_add_language_selector');  ?>
 			</div>
 		</div>
 	</nav>
