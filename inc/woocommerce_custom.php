@@ -181,6 +181,9 @@ if( ! function_exists( 'yith_wcan_filter_reset_button_class' ) ){
 	add_filter( 'yith_wcan_filter_reset_button_class', 'yith_wcan_filter_reset_button_class' );
  }
 
+ // remove cross sells in cart
+ remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
+
 /*  add_filter('woocommerce_variable_sale_price_html', 'shop_variable_product_price', 10, 2);
 add_filter('woocommerce_variable_price_html','shop_variable_product_price', 10, 2 );
 function shop_variable_product_price( $price, $product ){
