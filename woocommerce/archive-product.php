@@ -58,10 +58,13 @@ else {
 				<div class="col-md-9 col-12">
 					<div class="container">
 						<div class="row">
-							<div class="col-12">
+							<div class="col-10">
 								<div class="search-form-container">
 									<?php get_search_form(); ?>
 								</div>
+							</div>
+							<div class="col-2 text-right">
+								<a href="/shop" class="show-all-link"><?php echo __('show all' , 'fraaiberlin'); ?></a>
 							</div>	
 						</div>
 					</div>
