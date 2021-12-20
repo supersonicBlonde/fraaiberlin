@@ -25,6 +25,7 @@ jQuery(function($){
         $('.header-search-form-container').hide();
       
       })
+
   
 });
 

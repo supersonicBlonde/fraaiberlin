@@ -44,6 +44,24 @@
     line-height: 1.5;
 }
 
+@mixin chevron-top {
+    font-family: 'icomoon';
+    content: "\e901";
+    font-size: 8px;
+    border:none;
+    color: $nav__color_links;
+    margin-left: 15px;
+}
+
+@mixin chevron-bottom {
+    font-family: 'icomoon';
+    content: "\e900";
+    font-size: 8px;
+    border:none;
+    color: $nav__color_links;
+    margin-left: 15px;
+}
+
 @keyframe spin {
     from { transform: rotate(0)}
     to { transform: rotate(360)}

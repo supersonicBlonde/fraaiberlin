@@ -161,3 +161,21 @@ footer .menu {
 .show-all-link {
   margin-right: 5px;
 }
+
+// TOGGLE SINGLE PRODUCT
+.custom-description {
+  .label {
+    display: flex;
+    justify-content: space-between;
+    
+    &.closed:after {
+     @include chevron-top;
+     margin-right: 20px;
+    }
+
+    a.opened:after {
+        @include chevron-bottom;
+        margin-right: 20px;
+      }
+    }
+}

@@ -25,18 +25,18 @@ if ( ! defined( 'ABSPATH' ) ) {
     $fields_desc[1] = get_field_object('dimension_options');
     $fields_desc[2] = get_field_object('availability_shipping');
 
-    foreach($fields_desc as $field):
+    $count = 0; foreach($fields_desc as $field):
      if($field['value'] != ''): ?>
       <div class="desc-container">
-        <div class="label">
+        <div class="label closed" data-toggle="collapse" href="#collapse<?php echo $count; ?>">
           <?php echo $field['label']; ?>
         </div>
-        <p class="value-field">
+        <div class="value-field collapse" id="collapse<?php echo $count; ?>"> 
           <?php echo $field['value']; ?>
-        </p>
+        </div>
       </div>
      <?php endif;
-    endforeach;?>
+    $count++; endforeach;?>
 	</div>
 
 
