@@ -56,6 +56,15 @@ else {
 				</div>
 				
 				<div class="col-md-9 col-12">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="search-form-container">
+									<?php get_search_form(); ?>
+								</div>
+							</div>	
+						</div>
+					</div>
 					<div class="catalogue-container">
 				<?php
 				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;

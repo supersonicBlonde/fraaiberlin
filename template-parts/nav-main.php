@@ -1,5 +1,15 @@
 
 <div class="global-container">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12 text-center ">
+				<div class="header-search-form-container justify-content-center align-items-center">
+						<?php get_search_form(); ?>
+						<div class="form-close"><i class="fa fa-times-circle"></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="/">

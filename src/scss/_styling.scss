@@ -24,7 +24,7 @@
     THEME 
   	**************************************/
 
-#master-header.home {
+.home #master-header {
   height: 100vh;
 }
 
@@ -109,43 +109,51 @@ footer .menu {
 }
 
 
-//    BODY
-/*******************************/
-.scale {
-	transition: all 0.5s;
+// SEARCH FORM
+.search-form-container {
+  display: inline-block;
+  margin-bottom: 1.2em;
+}
+#search-form {
+  border-bottom: 1px solid $color__body;
+  ::placeholder, input {
+    font-style: italic;
+    font-size: 1em;
+    font-weight: $light;
+  }
 
-	&.scaleOut {
-		transform: scale(0.99);
-	}
+  input, input:active, input:focus {
+    font-size: 1.5em;
+    border: none;
+    outline: 0;
+    width: 305px;
+    height: 29px;
+    font-weight: 100;
+  }
 
-	&.scaleIn {
-		transform: scale(1);
-	}
+  button[type=submit] {
+    background: transparent;
+    border: none;
+  }
 }
 
-#overlay {
-  position: fixed; /* Sit on top of the page content */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  display: none;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-  transition: opacity 2s;
+.header-search-form-container {
+  background:white;
+  display:none;
 
-  &.show {
-  	opacity: 1;
-  	display: block;
+  #search-form {
+    border-bottom:1px solid $color__body;
   }
 
-   &.hide {
-  	opacity: 0;
-  	display: none;
-  }
+  .form-close {
+    font-size: 1.5em;
+    margin-left: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.5s;
 
+    &:hover {
+      opacity: 1;
+    }
+  }
 }

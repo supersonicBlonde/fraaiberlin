@@ -123,15 +123,30 @@ footer .global-container {
 }
 
 
+// FAQ HOME
+
 #home-faq {
-
-
 
 	.card-header, .question, .answer {
 		@media(min-width: 992px) {
 			width: 45%;
 			margin: 0 auto;
 		}
+	}
+}
+
+
+// SEARCH FORM IN HEADER
+.header-search-form-container {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	z-index: 9999;
+	left: 0;
+
+	#search-form {
+		margin: 20px 0;
+		display: inline-block;
 	}
 }
 

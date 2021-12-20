@@ -22,7 +22,7 @@ function quanta_load_scripts() {
 			wp_enqueue_script( 'jquery' );
 		}
 
-		wp_enqueue_style('josefin' , 'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+		wp_enqueue_style('josefin' , 'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&display=swap');
 		wp_enqueue_style('abril' , 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 		

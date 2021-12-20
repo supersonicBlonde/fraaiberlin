@@ -14,6 +14,18 @@ jQuery(function($){
         button.classList.toggle("open");
     });
    
+    $('.navbar .search-icon a').click(function(e) {
+        e.preventDefault();
+       
+        $('.header-search-form-container').fadeIn().css('display' , 'flex');
+      })
+  
+      $('.form-close').click(function(e) {
+        e.preventDefault();
+        $('.header-search-form-container').hide();
+      
+      })
+  
 });
 
 function mobileOnlySlider() {
