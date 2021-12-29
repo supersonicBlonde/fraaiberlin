@@ -90,7 +90,7 @@ footer .menu {
       }
 
       &.open:after {
-        content: "\e902";
+        content: "\e900";
       }
     } 
     
@@ -178,4 +178,23 @@ footer .menu {
         margin-right: 20px;
       }
     }
+}
+
+.section-icones {
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: $light!important;
+  }
+
+  i {
+    font-size: 2em;
+  }
+}
+
+.insta-link {
+  a {
+    font-weight: 400;
+    font-size: 1.2em;
+  }
 }

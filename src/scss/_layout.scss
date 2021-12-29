@@ -150,6 +150,24 @@ footer .global-container {
 	}
 }
 
+// ISNTAGRAM
+#sb_instagram .sbi_info p {
+	
+}
+
+#sb_instagram .sbi_link, #sb_instagram .sbi_photo_wrap:hover .sbi_link {
+	display: flex; align-items:center;
+}
+
+.insta-link {
+	width: 90%;
+	margin: 0 auto;
+	text-align: right;
+	padding-right: 10px;
+}
+
+
+
 @media (min-width: 1200px) {
 	.container {
 		max-width: 1230px!important;

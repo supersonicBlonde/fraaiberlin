@@ -181,7 +181,12 @@ get_header();
                         <?php $count++; endforeach; ?>
                                 </div>
                        <?php endif;
-                     endif; ?>
+                     elseif(get_row_layout() == 'instagram_feed' ): ?>
+                      <div class="section" id="instagram-feed">
+                        <?php echo do_shortcode(get_sub_field("instagram_shortcode")); ?>
+                        <div class="insta-link"><a href="https://www.instagram.com/fraaiberlin/" target="_blank"><?php the_sub_field('instagram_text_link'); ?></a></div>
+                      </div>
+                    <?php endif; ?>
           <?php endwhile; ?>
 
        <?php endif; ?>
