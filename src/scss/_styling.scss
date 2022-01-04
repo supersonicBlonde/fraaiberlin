@@ -198,3 +198,21 @@ footer .menu {
     font-size: 1.2em;
   }
 }
+
+.push-categories {
+  .title {
+    font-family: 'Abril Fatface', cursive;
+    color: $color__hover;
+    line-height: 1;
+    font-size: 6em;
+
+    &:after {
+      content: "";
+      background: $color__hover;
+      height:7px;
+      width:40%;
+      display:block;
+      margin: 50px auto;
+    }
+  }
+}

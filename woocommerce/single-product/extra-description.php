@@ -33,12 +33,27 @@ if ( ! defined( 'ABSPATH' ) ) {
               <p>
                 <?php echo $desc; ?>
               </p>
-              <h3 class="text-center my-5">How about designing your own Fraai piece?</h3>
-              <p>When it comes to size, finishes or materials, every Fraai product can be personalized down to the tiniest detail. Got a wild idea? Try our configurator or get in touch with us!</p>
-              <?php endif;?>
-              <div class="text-center my-5">
-                <a class="button default" href="/contact"><?php echo __('Contact us'); ?></a>
-              </div>
+             
+              <?php 
+              $id = $product->get_id(); 
+              $terms = get_the_terms($id , 'product_cat');
+              $term_id= [];
+              foreach($terms as $term) {
+                $term_id[] = $term->term_id;
+              }
+              
+              $options = get_field('apply_on_product_categories' , 'options');
+             
+              if(count(array_intersect($term_id, $options)) > 0):
+              ?>
+              
+                <h3 class="text-center my-5"><?php the_field('configurator_title' , 'options'); ?></h3>
+                <p><?php the_field('configurator_paragraph' , 'options') ?></p>s
+                <div class="text-center my-5">
+                  <a class="button default" href="/contact"><?php echo __('Contact us'); ?></a>
+                </div>
+                <?php endif;?>
+              <?php endif; ?>
       </div>
     </div>
   </div>

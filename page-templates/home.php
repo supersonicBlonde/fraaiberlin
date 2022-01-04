@@ -41,7 +41,7 @@ get_header();
                             <div class="col-12 col-md-4 d-flex justify-content-center mb-3">
                               <a class="w-100 href="<?php echo $term->slug; ?>" class="no-underline">
                                 <div class="bg-categories background-image position-relative" style="background-image:url(<?php echo $image; ?>">
-                                  <div class="title white uppercase display-4 bold position-absolute"><?php echo $term->name; ?></div>
+                                  <div class="title position-absolute text-center"><?php the_sub_field('text'); ?></div>
                                 </div>
                               </a>
                             </div>

@@ -24,6 +24,7 @@ function quanta_load_scripts() {
 
 		wp_enqueue_style('josefin' , 'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&display=swap');
 		wp_enqueue_style('abril' , 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+		wp_enqueue_style('abril' , 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 		
 		wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', array(), '4.0.0', 'all' );

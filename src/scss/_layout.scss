@@ -37,8 +37,10 @@ flex-grow: 1;
 
 .push-categories {
 	.title {
-		top: -6px;
-		left: -5px;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%);
+		
 	}
 }
 
@@ -151,9 +153,6 @@ footer .global-container {
 }
 
 // ISNTAGRAM
-#sb_instagram .sbi_info p {
-	
-}
 
 #sb_instagram .sbi_link, #sb_instagram .sbi_photo_wrap:hover .sbi_link {
 	display: flex; align-items:center;
